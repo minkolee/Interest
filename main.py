@@ -135,9 +135,9 @@ while current_date != end_date and current_balance != 0:
 
     # 判断利率序列是否需要更新
     if is_ir_update:
-        # 比较当前日期与本金序列指针指向的日期
+        # 比较当前日期与利率序列指针指向的日期
         if current_date == note_ir_series[ir_series_pointer][1]:
-            # 如果相同，更新当前剩余本金金额
+            # 如果相同，更新当前利率
             current_ir = note_ir_series[ir_series_pointer][0]
             # 更新成功后移动指针，如果指针已经到最后，不需要移动
             if ir_series_pointer < len(note_ir_series) - 1:
